@@ -4,7 +4,7 @@ using UnityEngine;
 public class AtackingState : State<EnemyController>
 {
     [SerializeField] private float timeBetweenAtacks = 1.4f; 
-    [SerializeField] private float baseAtackDmg = 10f;
+    //[SerializeField] private float baseAtackDmg = 10f;
     private float timer;
     
     public override void OnEnterState(EnemyController controller)
