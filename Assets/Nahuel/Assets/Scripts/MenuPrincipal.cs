@@ -12,7 +12,7 @@ public class MenuPrincipal : MonoBehaviour
     [SerializeField] private AudioMixer aM;
     void Start()
     {
-        mainMenuPanel.SetActive(true);
+        mainMenuPanel.SetActive(false);
         optionsMenuPanel.SetActive(false);
     }
 

@@ -17,6 +17,6 @@ public class tuboRotatorio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.Rotate(Vector3.up * fuerzaRotacion * Time.deltaTime, Space.World);
+        transform.Rotate(Vector3.up * fuerzaRotacion * Time.deltaTime, Space.World);
     }
 }

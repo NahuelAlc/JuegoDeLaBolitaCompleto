@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2682360398010390062}
   - component: {fileID: 4711214044555636744}
   - component: {fileID: 721879873396906979}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 4882402117367745222}
   - component: {fileID: 8075075333861847796}
   - component: {fileID: 4927019469390856106}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ MonoBehaviour:
     m_Bits: 64
   queEsObstaculo:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 8
 --- !u!114 &7548891771521363897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseVelocity: 5
+  tiempoAntesDePatrullar: 2
 --- !u!33 &3309278433204127666
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -218,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9031c63c18018140aa445e3f6234bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBetweenAtacks: 1.4
 --- !u!23 &1161392004911727020
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -294,7 +296,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8556523333269749659}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: Infinity
