@@ -1,9 +1,12 @@
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AtackingState : State<EnemyController>
 {
     [SerializeField] private float timeBetweenAtacks = 1.4f; 
+    [SerializeField] PlayerDynamics player;
+    private AudioSource sonidoAtaque;
     //[SerializeField] private float baseAtackDmg = 10f;
     private float timer;
     
@@ -28,6 +31,9 @@ public class AtackingState : State<EnemyController>
             timer += Time.deltaTime;
                 if(timer >= timeBetweenAtacks){
                     timer = 0;
+                    player.VidaActual -= 20f;
+                    player.Canvas.HealthBar.fillAmount = player.VidaActual / player.VidaInicial;
+                    sonidoAtaque.Play();
                     Debug.Log("Hago daño"); 
                 }
         }
@@ -39,7 +45,7 @@ public class AtackingState : State<EnemyController>
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        sonidoAtaque = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

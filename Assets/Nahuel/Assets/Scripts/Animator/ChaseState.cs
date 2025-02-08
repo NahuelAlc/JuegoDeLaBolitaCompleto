@@ -26,7 +26,7 @@ public class ChaseState : State<EnemyController>
     public override void OnUpdateState()
     {   
         if(!controller.Agent.pathPending && controller.Agent.CalculatePath(controller.Target.position, new NavMeshPath())){
-            StopMyCoroutine();
+            StopAllCoroutines();
             controller.Agent.SetDestination(controller.Target.position);
             if(!controller.Agent.pathPending && controller.Agent.remainingDistance <= controller.Agent.stoppingDistance){
                 controller.ChangeState(controller.AtackingState);
