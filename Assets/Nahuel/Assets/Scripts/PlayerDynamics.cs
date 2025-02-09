@@ -13,6 +13,8 @@ public class PlayerDynamics : MonoBehaviour
     [SerializeField] private Transform spawn;
     [SerializeField] private float distanciaDeteccionSuelo = 1.1f;
     [SerializeField] private float distanciaPulsacion = 7f;
+    
+    private AudioSource audioSource;
     private float vidaActual;
     private float score = 0;
     private Rigidbody rb;
@@ -25,6 +27,7 @@ public class PlayerDynamics : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         VidaActual = VidaInicial;
         Application.targetFrameRate = 100000;
         rb = GetComponent<Rigidbody>();
@@ -46,6 +49,7 @@ public class PlayerDynamics : MonoBehaviour
             if(Input.GetKeyUp(KeyCode.Space)){
                 if(fuerzaSalto > 10) fuerzaSalto = 10;
                 rb.AddForce(Vector3.up.normalized * fuerzaSalto, ForceMode.Impulse);
+                audioSource.Play();
                 fuerzaSalto = 5;
             }
         }
@@ -60,13 +64,17 @@ public class PlayerDynamics : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Escape)){
                 if(mP.gameObject.activeInHierarchy){
-                    Canvas.gameObject.SetActive(true);
+                    canvas.gameObject.SetActive(true);
                     mP.SetActive(false);
                     Debug.Log("Canvas activado.");
                 }
                 else {
-                    Canvas.gameObject.SetActive(false);
+                    canvas.gameObject.SetActive(false);
                     mP.SetActive(true);
+                    foreach (Transform child in mP.transform)
+                    {
+                        child.gameObject.SetActive(true); // Activa todos los hijos
+                    }
                     Debug.Log("Menu activado.");
                 }
             }
@@ -76,7 +84,7 @@ public class PlayerDynamics : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             SceneManager.LoadScene(0);
         }
-        if(score == 15){
+        if(score == 20){
             SceneManager.LoadScene(2);
         }
     }
