@@ -1,21 +1,22 @@
+using System;
 using System.Threading;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class AtackingState : State<EnemyController>
 {
-    [SerializeField] private float timeBetweenAtacks = 1.4f; 
-    [SerializeField] PlayerDynamics player;
+    [SerializeField] private PlayerDynamics player;
+    [SerializeField] private float baseAtackDmg;
     private AudioSource sonidoAtaque;
     //[SerializeField] private float baseAtackDmg = 10f;
-    private float timer;
     
     public override void OnEnterState(EnemyController controller)
     {
         base.OnEnterState(controller);
+        controller.Anim.SetBool("atacking", true);
         Debug.Log("Estoy en estado de ataque");
         controller.Agent.stoppingDistance = controller.AtackDistance;
-        timer = timeBetweenAtacks;
     }
 
     public override void OnExitState()
@@ -25,21 +26,14 @@ public class AtackingState : State<EnemyController>
 
     public override void OnUpdateState()
     {   
-        controller.Agent.SetDestination(controller.Target.position);
-        //Si tengo el palyer en rango de ataque
-        if(!controller.Agent.pathPending && controller.Agent.remainingDistance < controller.Agent.stoppingDistance){
-            timer += Time.deltaTime;
-                if(timer >= timeBetweenAtacks){
-                    timer = 0;
-                    player.VidaActual -= 20f;
-                    player.Canvas.HealthBar.fillAmount = player.VidaActual / player.VidaInicial;
-                    sonidoAtaque.Play();
-                    Debug.Log("Hago daño"); 
-                }
-        }
-        else {
-            controller.ChangeState(controller.PatrolState);
-        }
+        FaceTarget(); //Asegurarme que el enemigo enfoca al player 
+    }
+
+    private void FaceTarget()
+    {
+        Vector3 directionToTarget = (controller.Target.transform.position - transform.position).normalized;
+        directionToTarget.y = 0;
+        transform.rotation = Quaternion.LookRotation(directionToTarget);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -52,5 +46,19 @@ public class AtackingState : State<EnemyController>
     void Update()
     {
         
+    }
+
+    private void Attack(){
+        player.VidaActual -= 20f;
+        player.Canvas.HealthBar.fillAmount = player.VidaActual / player.VidaInicial;
+        sonidoAtaque.Play();
+        Debug.Log("Hago daño");
+    }
+
+    private void OnFinishAttackAnimation(){
+        if(Vector3.Distance(transform.position, controller.Target.transform.position) > controller.AtackDistance){
+            controller.Anim.SetBool("atacking", false);
+            controller.ChangeState(controller.PatrolState);
+        } 
     }
 }

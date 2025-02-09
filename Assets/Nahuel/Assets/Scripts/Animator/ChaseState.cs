@@ -5,14 +5,13 @@ using UnityEngine.AI;
 
 public class ChaseState : State<EnemyController>
 {
-    [SerializeField] private float chaseVelocity = 5f;
     [SerializeField] private float tiempoAntesDePatrullar = 2f;
 
     private Coroutine coroutine; 
     public override void OnEnterState(EnemyController controller)
     {
         base.OnEnterState(controller);
-        controller.Agent.speed = chaseVelocity;
+        controller.Agent.speed = controller.ChaseVelocity;
         Debug.Log("Estoy en estado de perseguir!!!");
         controller.Agent.stoppingDistance = controller.AtackDistance;
         controller.Agent.acceleration = 100000;
@@ -25,6 +24,7 @@ public class ChaseState : State<EnemyController>
 
     public override void OnUpdateState()
     {   
+        controller.Anim.SetFloat("velocity", controller.Agent.velocity.magnitude / controller.ChaseVelocity);
         if(!controller.Agent.pathPending && controller.Agent.CalculatePath(controller.Target.position, new NavMeshPath())){
             StopAllCoroutines();
             controller.Agent.SetDestination(controller.Target.position);
@@ -37,6 +37,7 @@ public class ChaseState : State<EnemyController>
     }
 
     private IEnumerator StopAndReturn(){
+        Debug.Log("Lo he perdido");
         yield return new WaitForSeconds(tiempoAntesDePatrullar);
         controller.ChangeState(controller.PatrolState);
     }

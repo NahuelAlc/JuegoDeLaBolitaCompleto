@@ -34,6 +34,8 @@ public class PatrolState : State<EnemyController>
 
     public override void OnUpdateState()
     {
+        
+        controller.Anim.SetFloat("velocity", controller.Agent.velocity.magnitude / controller.ChaseVelocity);
         Collider[] collsDetectados = Physics.OverlapSphere(transform.position, controller.RangoVision, queEsTarget);
         if(collsDetectados.Length > 0){
             Vector3 direccionATarget=(collsDetectados[0].transform.position - transform.position).normalized;    
