@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BallPhysics : MonoBehaviour
@@ -75,6 +76,10 @@ public class BallPhysics : MonoBehaviour
             Winner.SetActive(true);
             UI.SetActive(false);
             Time.timeScale = 0;
+        }
+        if (score == 1) 
+        {
+            SceneManager.LoadScene(3);
         }
     }
 
