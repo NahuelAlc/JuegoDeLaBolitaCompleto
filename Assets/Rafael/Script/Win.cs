@@ -24,8 +24,7 @@ public class Win : MonoBehaviour
         if (other.name == "Player")
         {
             Time.timeScale = 0.0f;
-            Winner.SetActive(true);
-            UI.SetActive(false);
+            SceneManager.LoadScene(3);
         }
     }
 }
