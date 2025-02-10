@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nahuel/Assets/Scenes/Victoria.unity
     guid: b72727068467db54eb6b7e3750d85671
+  - enabled: 1
+    path: Assets/Rafael/Scenes/MainMenu.unity
+    guid: 584d03c0407fecb469599687e308f512
+  - enabled: 1
+    path: Assets/Rafael/Scenes/Laberinto.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
