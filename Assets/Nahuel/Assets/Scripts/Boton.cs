@@ -11,6 +11,7 @@ public class Boton : MonoBehaviour
     private void OnCollisionEnter(Collision collision){
         if(collision.transform.TryGetComponent(out PlayerDynamics player)){
             gM.BotonPulsado(idBoton);
+            Debug.Log("Boton pulsado");
         }
     }
 }
