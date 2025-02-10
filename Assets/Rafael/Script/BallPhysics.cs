@@ -18,10 +18,11 @@ public class BallPhysics : MonoBehaviour
     [SerializeField] public Image Vida;
     [SerializeField] private TextMeshProUGUI Score;
     [SerializeField] private TextMeshProUGUI Score2;
-    private float score = 0;
+    public int score = 0;
     private float vidaActual;
     public float VidaActual { get => vidaActual; set => vidaActual = value; }
     public float VidaInicial { get => vidaInicial; }
+
     private float X;
     private float Z;
     private Rigidbody rb;
@@ -76,10 +77,6 @@ public class BallPhysics : MonoBehaviour
             Winner.SetActive(true);
             UI.SetActive(false);
             Time.timeScale = 0;
-        }
-        if (score == 1) 
-        {
-            SceneManager.LoadScene(3);
         }
     }
 
