@@ -13,12 +13,16 @@ public class PlayerDynamics : MonoBehaviour
     [SerializeField] private Transform spawn;
     [SerializeField] private float distanciaDeteccionSuelo = 1.1f;
     [SerializeField] private float distanciaPulsacion = 7f;
-    
+    [SerializeField] private AudioClip audioSalto;
+    [SerializeField] private AudioClip audioGolpe;
+    [SerializeField] private AudioClip audioRolling;
     private AudioSource audioSource;
     private float vidaActual;
     private float score = 0;
     private Rigidbody rb;
     private float hInput, vInput;
+    public GameObject Camera;
+    private float Y;
 
     public float VidaActual { get => vidaActual; set => vidaActual = value; }
     public canvasManager Canvas { get => canvas; set => canvas = value; }
@@ -30,7 +34,7 @@ public class PlayerDynamics : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         VidaActual = VidaInicial;
         Application.targetFrameRate = 100000;
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>(); 
         Canvas.gameObject.SetActive(true);
         mP.SetActive(false);
         Canvas.ScoreText.text = "Score: " + score.ToString();
@@ -41,7 +45,12 @@ public class PlayerDynamics : MonoBehaviour
     {
         hInput = Input.GetAxisRaw("Horizontal");  // -1, 0, 1
         vInput = Input.GetAxisRaw("Vertical"); //-1, 0, 1
-        
+        Y = Camera.transform.eulerAngles.y;
+        transform.localRotation = Quaternion.Euler(0,Y,0);
+
+        if (!audioSource.isPlaying && Physics.Raycast(transform.position, Vector3.down, distanciaDeteccionSuelo)){
+            audioSource.PlayOneShot(audioRolling);
+        }
         if(Physics.Raycast(transform.position, Vector3.down, distanciaDeteccionSuelo)){
             if(Input.GetKey(KeyCode.Space)){
                 fuerzaSalto += 3;
@@ -49,7 +58,7 @@ public class PlayerDynamics : MonoBehaviour
             if(Input.GetKeyUp(KeyCode.Space)){
                 if(fuerzaSalto > 10) fuerzaSalto = 10;
                 rb.AddForce(Vector3.up.normalized * fuerzaSalto, ForceMode.Impulse);
-                audioSource.Play();
+                audioSource.PlayOneShot(audioSalto);
                 fuerzaSalto = 5;
             }
         }
@@ -91,7 +100,7 @@ public class PlayerDynamics : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(new Vector3(hInput, 0 , vInput).normalized * fuerza, ForceMode.Force);
+        rb.AddRelativeForce(new Vector3(hInput, 0 , vInput).normalized * fuerza, ForceMode.Force);
     }
     
     private void OnTriggerEnter (Collider Other){
@@ -99,6 +108,7 @@ public class PlayerDynamics : MonoBehaviour
             Destroy(Other.gameObject);
             score++;
             Canvas.ScoreText.text = "Score: " + score.ToString();
+            audioSource.Play();
         }
         if(Other.gameObject.TryGetComponent(out Trampa trampa)){
             trampa.Activado();
@@ -109,6 +119,7 @@ public class PlayerDynamics : MonoBehaviour
         if(other.gameObject.CompareTag("cilindrogolpeador")){
             VidaActual -= 20;
             Canvas.HealthBar.fillAmount = VidaActual / VidaInicial;
+            audioSource.PlayOneShot(audioGolpe);
         }
         if(other.gameObject.TryGetComponent(out TechoTrampa trampa)){
             transform.position = spawn.position;

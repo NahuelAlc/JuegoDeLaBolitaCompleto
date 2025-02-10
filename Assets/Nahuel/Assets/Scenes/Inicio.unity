@@ -1523,6 +1523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muro (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
       value: 50
@@ -1587,6 +1591,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -2014,6 +2022,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -2832,6 +2844,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -3875,6 +3891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muro (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -4267,6 +4287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muro (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -4331,6 +4355,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -4461,6 +4489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 957965637}
   - component: {fileID: 957965636}
+  - component: {fileID: 957965638}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -4515,8 +4544,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957965635}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.270598, y: 0.6532815, z: -0.270598, w: 0.6532815}
-  m_LocalPosition: {x: -18, y: 16.05, z: -0.0000013113416}
+  m_LocalRotation: {x: 0.09807657, y: 0.7002721, z: -0.09807657, w: 0.7002721}
+  m_LocalPosition: {x: -10, y: 3.05, z: -62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4524,6 +4553,36 @@ Transform:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &957965638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957965635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 9
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 1
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4797,6 +4856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: puerta (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5454747459199806314, guid: 04cef3ea78802d6489c438d03b18703f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7453468266741592856, guid: 04cef3ea78802d6489c438d03b18703f, type: 3}
       propertyPath: m_RootOrder
       value: 52
@@ -4861,6 +4924,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -5131,6 +5198,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -5932,6 +6003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: puerta (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5454747459199806314, guid: 04cef3ea78802d6489c438d03b18703f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7453468266741592856, guid: 04cef3ea78802d6489c438d03b18703f, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -6280,6 +6355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muro (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -6568,10 +6647,6 @@ PrefabInstance:
       value: cuboOro (29)
       objectReference: {fileID: 0}
     - target: {fileID: 8456921870693623844, guid: a505ad9779446284b89b58840990bdaa, type: 3}
-      propertyPath: m_RootOrder
-      value: 96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456921870693623844, guid: a505ad9779446284b89b58840990bdaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.23
       objectReference: {fileID: 0}
@@ -6614,43 +6689,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8174611096880463809, guid: a505ad9779446284b89b58840990bdaa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1375463948}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a505ad9779446284b89b58840990bdaa, type: 3}
---- !u!1 &1375463947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8174611096880463809, guid: a505ad9779446284b89b58840990bdaa, type: 3}
-  m_PrefabInstance: {fileID: 1375463946}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1375463948
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375463947}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1392462123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6662,6 +6702,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -6898,10 +6942,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 15, y: 15, z: 0}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_FollowOffset: {x: 7, y: 2, z: 0}
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -6912,7 +6956,7 @@ MonoBehaviour:
     m_VelocityFilterStrength: 4
     m_Bias: -180
   m_RecenterToTargetHeading:
-    m_enabled: 1
+    m_enabled: 0
     m_WaitTime: 1
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
@@ -6950,6 +6994,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -7137,6 +7185,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -7648,6 +7700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muro (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
       value: 98
@@ -7712,6 +7768,10 @@ PrefabInstance:
     - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_Name
       value: muro (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
@@ -8484,6 +8544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muro (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -9193,6 +9257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muro (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 436421231890014952, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3084214504669117082, guid: ef1d3d1bbfd86b7498c03a86bbbbd249, type: 3}
       propertyPath: m_RootOrder
       value: 87
@@ -9430,6 +9498,10 @@ PrefabInstance:
     - target: {fileID: 5454747459199806314, guid: 04cef3ea78802d6489c438d03b18703f, type: 3}
       propertyPath: m_Name
       value: puerta (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454747459199806314, guid: 04cef3ea78802d6489c438d03b18703f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7453468266741592856, guid: 04cef3ea78802d6489c438d03b18703f, type: 3}
       propertyPath: m_RootOrder
@@ -9672,105 +9744,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3559268126697146816, guid: 54d99f8469a4d67429b78f3e505e8efe, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e36811a80c27b5b45a996b4f501ce3a9, type: 3}
-  m_Resource: {fileID: 8300000, guid: e36811a80c27b5b45a996b4f501ce3a9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!82 &2122557144
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155652577}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 3559268126697146816, guid: 54d99f8469a4d67429b78f3e505e8efe, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f4dddb5859626e640970d8061c9c6b47, type: 3}
-  m_Resource: {fileID: 8300000, guid: f4dddb5859626e640970d8061c9c6b47, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 583aecb645746704cb8c326d2e81e867, type: 3}
+  m_Resource: {fileID: 8300000, guid: 583aecb645746704cb8c326d2e81e867, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9816,7 +9791,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -11272,6 +11247,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1781069797}
     - target: {fileID: 2122557132, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 957965635}
+    - target: {fileID: 2122557132, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1912983471}
@@ -11280,9 +11259,21 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2122557132, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
+      propertyPath: audioGolpe
+      value: 
+      objectReference: {fileID: 8300000, guid: f4dddb5859626e640970d8061c9c6b47, type: 3}
+    - target: {fileID: 2122557132, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
+      propertyPath: audioSalto
+      value: 
+      objectReference: {fileID: 8300000, guid: e36811a80c27b5b45a996b4f501ce3a9, type: 3}
+    - target: {fileID: 2122557132, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
       propertyPath: vidaInicial
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 2122557132, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
+      propertyPath: audioRolling
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f293481a4125f348b906fd47e115b55, type: 3}
     - target: {fileID: 5727411800106336512, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -11297,7 +11288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5727411800106336512, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60.59
+      value: -1.4099998
       objectReference: {fileID: 0}
     - target: {fileID: 5727411800106336512, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11342,9 +11333,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5912486601676826171, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2122557143}
-    - targetCorrespondingSourceObject: {fileID: 5912486601676826171, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2122557144}
   m_SourcePrefab: {fileID: 100100000, guid: 8637f3f04f91a6b4eadd2ba03fef5291, type: 3}
 --- !u!1 &2988780740409415133
 GameObject:

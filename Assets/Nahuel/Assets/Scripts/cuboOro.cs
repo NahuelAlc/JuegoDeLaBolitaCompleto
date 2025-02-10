@@ -5,6 +5,7 @@ using UnityEngine;
 public class cuboOro : MonoBehaviour
 {
     [SerializeField] private float velocidadRotacion = 15;
+    
     // Start is called before the first frame update
     void Start()
     {
