@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BallPhysics : MonoBehaviour
@@ -18,11 +17,10 @@ public class BallPhysics : MonoBehaviour
     [SerializeField] public Image Vida;
     [SerializeField] private TextMeshProUGUI Score;
     [SerializeField] private TextMeshProUGUI Score2;
-    public int score = 0;
+    private float score = 0;
     private float vidaActual;
     public float VidaActual { get => vidaActual; set => vidaActual = value; }
     public float VidaInicial { get => vidaInicial; }
-
     private float X;
     private float Z;
     private Rigidbody rb;

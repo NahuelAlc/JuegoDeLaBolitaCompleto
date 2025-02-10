@@ -93,7 +93,7 @@ public class PlayerDynamics : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             SceneManager.LoadScene(0);
         }
-        if(score == 25){
+        if(score == 20){
             SceneManager.LoadScene(2);
         }
     }

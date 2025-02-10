@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,7 +21,7 @@ public class Win : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Player" && other.gameObject.GetComponent<BallPhysics>().score == 3)
+        if (other.name == "Player")
         {
             Time.timeScale = 0.0f;
             SceneManager.LoadScene(3);
